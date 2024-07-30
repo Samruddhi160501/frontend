@@ -40,7 +40,7 @@ const DashboardTwo = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/students")
+      .get(`${process.env.REACT_APP_API_URL}`)
       .then((response) => {
         const students = response.data;
 

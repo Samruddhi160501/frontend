@@ -32,7 +32,7 @@ const AddStudent = () => {
     };
 
     axios
-      .post("http://localhost:5000/students/add", newStudent)
+      .post(`${process.env.REACT_APP_API_URL}/add`, newStudent)
       .then((res) => {
         console.log(res.data);
         setOpenSnackbar(true);

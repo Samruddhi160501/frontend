@@ -28,35 +28,6 @@ const renderCustomLabel = ({
   );
 };
 
-const renderLegend = (props) => {
-  const { payload } = props;
-  return (
-    <ul style={{ listStyleType: "none", padding: 0 }}>
-      {payload.map((entry, index) => (
-        <li
-          key={`item-${index}`}
-          style={{
-            display: "flex",
-            alignItems: "center",
-            marginBottom: 4,
-            marginTop: 3,
-          }}
-        >
-          <div
-            style={{
-              width: 20,
-              height: 20,
-              backgroundColor: entry.color,
-              marginRight: 8,
-            }}
-          ></div>
-          <span>{entry.value}</span>
-        </li>
-      ))}
-    </ul>
-  );
-};
-
 const PieChartComponent = ({ data }) => (
   <Box
     sx={{

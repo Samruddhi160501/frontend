@@ -46,7 +46,7 @@ const EditStudent = () => {
     };
 
     axios
-      .put(`http://localhost:5000/students/update/${id}`, updatedStudent)
+      .put(`${process.env.REACT_APP_API_URL}/update/${id}`, updatedStudent)
       .then((res) => {
         console.log(res.data);
         setOpenSnackbar(true);
